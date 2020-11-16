@@ -1,0 +1,13 @@
+body
+{
+	background-color:#FAFAFA;
+}
+.div1
+{
+	background-image:url("div1.png");
+	background-size:100%;
+	background-repeat:no-repeat;
+	width:1366px;
+	height:150px;
+	margin: -8px;
+}

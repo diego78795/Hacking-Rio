@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rastreamento Sotreq</title>
+  </head>
+  <body>
+  
+<?php
+include('verificador.php');
+include('rastreamento.php');
+?>
+  
+<form action="rastreamentoAdm.php" method="POST">
+
+<fieldset><legend><?php echo $_SESSION['codPedido'] ?></legend>
+<p>Pagamento<select name="pagamento"><option>Aprovado</option><option>Aguardo</option></select></p>
+<p>Emprestimo<select name="emprestimo"><option>Aprovado</option><option>Aguardo</option></select></p>
+<label for="z">Prazo <input name="prazo" type="texte" id="z" size=25 maxlength=45 placeholder="Para mudar o prazo de entrega" /></label></p>
+<p>Fase 1
+<label for="d">Local <input name="local1" type="texte" id="d" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 2
+<label for="f">Local <input name="local2" type="texte" id="f" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 3
+<label for="h">Local <input name="local3" type="texte" id="h" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 4
+<label for="j">Local <input name="local4" type="texte" id="j" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 5
+<label for="l">Local <input name="local5" type="texte" id="l" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 6
+<label for="n">Local <input name="local6" type="texte" id="n" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 7
+<label for="p">Local <input name="local7" type="texte" id="p" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 8
+<label for="r">Local <input name="local8" type="texte" id="r" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+
+<p>Fase 9
+<label for="t">Local <input name="local9" type="texte" id="t" size=25 maxlength=45 placeholder="Estado/Cidade ex: RJ/Niteroi" /></label></p>
+<p><input type="submit" value="Submeter" /></p>
+</fieldset>
+</form>
+  
+<a href="deletar.php"><input type="button" value="Deletar" /></a>
+<a href="logout2.php"><input type="button" value="Logout" /></a>
+  
+  </body>
+</html>

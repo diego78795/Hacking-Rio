@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="avançado.css">
+<title>Rastreamento Sotreq</title>
+<script src="avançado.js"></script>
+</head>
+<body>
+
+<?php
+include('verificador.php');
+include('rastreamento.php');
+?>
+
+<div class="div1"></div>
+<div class="div2" id="div2">O prazo de entrega é de: <?php echo $Praz ?> dias</div>
+<div class="div4" id="div4">
+
+<?php
+if($Pag==1 && $Local[2]=='u'):
+?>
+<p class="t">O pagamento e o emprestimo já foram aprovados e estamos aguardando e resposta da fabrica.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Pag==1 && $Local[2]!='u'):
+?>
+<p class="t">O pagamento e o emprestimo já foram aprovados.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[2]!='u' && $Local[3]=='u'):
+?>
+<p class="t">O produto esta sendo preparado para entrega e logo sairá de <?php echo $Local[2];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[2]!='u' && $Local[3]!='u'):
+?>
+<p class="t">O produto já esta pronto e logo sairá ou já saiu de <?php echo $Local[2];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[3]!='u'):
+?>
+<p class="t">O produto já saiu de <?php echo $Local[2];?> e chegará em <?php echo $Local[3];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[4]!='u'):
+?>
+<p class="t">O produto já chegou em <?php echo $Local[3];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[5]!='u'):
+?>
+<p class="t">O produto já saiu de <?php echo $Local[3];?> e chegará em <?php echo $Local[5];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[6]!='u' && $Local[7]=='u'):
+?>
+<p class="t">O produto já chegou em <?php echo $Local[5];?> e talvez vá para a fase de desmembramento.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[6]!='u' && $Local[7]!='u'):
+?>
+<p class="t">O produto já chegou em <?php echo $Local[5];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[7]!='u' && $Local[8]=='u'):
+?>
+<p class="t">O produto já passou pela fase de desmembramento em <?php echo $Local[5];?> e logo ira para a entrega técnica.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[7]!='u' && $Local[8]!='u'):
+?>
+<p class="t">O produto já passou pela fase de desmembramento em <?php echo $Local[5];?>.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[8]!='u'):
+?>
+<p class="t">O produto já esta na entrega técnica.</p><br>
+<?php
+endif;
+?>
+
+<?php
+if($Local[9]!='u'):
+?>
+<p class="t">O produto já consta que chegou no seu destino final.</p><br>
+<?php
+endif;
+?>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+body
+{
+	background-color:#FAFAFA;
+}
+.t
+{
+	font-size:20pt;
+	margin:-10px;
+}
+.div1
+{
+	background-image:url("div1.png");
+	background-size:100%;
+	background-repeat:no-repeat;
+	width:1366px;
+	height:150px;
+	margin: -8px;
+}
+.div2
+{
+	font-size:30pt;
+	color:red;
+	width:400px;
+	height:150px;
+    position:relative;
+	left:20px;
+	top:40px;
+}
+
+.div4
+{
+	width:800px;
+	height:300px;
+    position:relative;
+	left:500px;
+}

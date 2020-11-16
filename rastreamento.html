@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="rastreamento.css">
+<title>Rastreamento Sotreq</title>
+<?php
+include('verificador.php');
+include('rastreamento.php');
+?>
+<script src="rastreamento.js"></script>
+</head>
+<body>
+
+<?php
+if($Pag==1):
+?>
+<script>f=1;</script>
+<?php
+endif;
+?>
+
+<?php
+if($Local[3]!='u'):
+?>
+<script>f=2;</script>
+<?php
+endif;
+?>
+
+<?php
+if($Local[8]!='u'):
+?>
+<script>f=3;</script>
+<?php
+endif;
+?>
+
+<?php
+if($Local[9]!='u'):
+?>
+<script>f=4;</script>
+<?php
+endif;
+?>
+
+<div class="div1"></div>
+<div class="div2" > <?php echo $_SESSION['codPedido'] ?></div>
+<div class="div3" id="div3"></div>
+<div class="div4" id="div4"></div>
+<div class="div5" id="div5"></div>
+<div class="div6" id="div6"></div>
+<div class="div7" id="div7"></div>
+<div class="div8" id="div8"></div>
+<div class="div9" id="div9"></div>
+
+<script>f3();</script>
+
+<a href="logout.php"><div class="div11" id="div11">Logout</div></a>
+<a href="https://www.sotreq.com.br/pt-br/atendimento" target="_Blank"><div class="div12" id="div12">Fale conosco</div></a>
+<a href="avançado.html"><div class="div10" id="div10">•••Mais avançado</div></a>
+
+</body>
+</html>
